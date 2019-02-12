@@ -1,0 +1,13 @@
+
+service: aws-python3 
+
+provider:
+  name: aws
+  runtime: python3.7
+  environment:
+    invoke-url: http://cf-lambda-diff-test.s3-website.eu-west-1.amazonaws.com/index.html
+    sitemap-url: http://cf-lambda-diff-test.s3-website.eu-west-1.amazonaws.com/sitemap-index.html
+
+functions:
+  hello:
+    handler: index.lambda_handler
